@@ -28,9 +28,11 @@ async function main() {
   const messagesPath = program.args[1];
 
   const messages = JSON.parse(fs.readFileSync(messagesPath).toString());
-  await Promise.all(
+  await Promise.allSettled(
     messages.map(async (message: any) => await publishMessage(pubsubClient, topicName, message))
-  );
+  ).then(() => {
+    console.log('Messages sent :', messages.length);
+  });
 }
 
 main().catch(({ message }) => {
