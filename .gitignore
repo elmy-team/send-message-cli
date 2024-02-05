@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.idea
+.vscode
+.run
+
+.DS_Store
+
+*.log
+.eslintcache
+
+messages
+**/.env

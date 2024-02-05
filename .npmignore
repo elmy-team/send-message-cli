@@ -1,0 +1,13 @@
+# .npmignore
+node_modules
+.env*
+.eslintrc
+.prettierrc.json
+tsconfig.json
+.pnpm-lock.yaml
+.idea
+.vscode
+.run
+.DS_Store
+*.log
+.eslintcache
